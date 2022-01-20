@@ -4,6 +4,8 @@ leftWristX = 0;
 leftWristY = 0;
 rightWristX = 0;
 rightWristY = 0;
+song1Status = " ";
+song2Status = " ";
 
 function preload()
 {
@@ -51,6 +53,21 @@ function gotPoses(results)
 function draw()
 {
     image(video, 0, 0, 600, 500);
+    fill("red");
+    stroke("red");
+    song1Status = song1Status.isPlaying();
+    if(leftWristX > 0.2)
+    {
+        circle(leftWristX, leftWristY, 20);
+        song2Status.stop();
+       
+        if(song1Status = false)
+        {
+            song1.play();
+            document.getElementById("song_name").innerHTML = " Peter Pan Song is now playing";
+        }      
+    }
+    
 }
 
 
