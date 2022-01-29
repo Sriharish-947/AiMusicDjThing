@@ -53,6 +53,7 @@ function gotPoses(results)
 function draw()
 {
     image(video, 0, 0, 600, 500);
+    console.log(video);
     fill("red");
     stroke("red");
     song1Status = song1Status.isPlaying();
